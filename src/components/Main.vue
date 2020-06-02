@@ -1,5 +1,5 @@
 <template>
-  <b-container fluid="" class="h-100">
+  <b-container fluid="" class="h-100 mt-2">
     <b-row  class="h-75">
       <b-col cols="9">
         <Map :chartData="chartData"/>
