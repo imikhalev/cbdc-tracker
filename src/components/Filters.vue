@@ -34,6 +34,7 @@
             <li><a target="_blank" href="https://www.linkedin.com/in/mikhalev/">Igor Mikhalev</a></li>
             <li><a target="_blank" href="https://www.linkedin.com/in/kaj-burchardi-b1030242/">Kaj Burchardi</a></li>
             <li><a target="_blank" href="https://www.linkedin.com/in/bihaosong/">Bihao Song</a></li>
+            <br>
         </div>
 
     </div>
