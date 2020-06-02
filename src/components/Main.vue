@@ -57,7 +57,13 @@ export default {
   methods: {
     selectedStatusesChanged(selectedStatuses) {
       this.selectedStatuses = selectedStatuses;
+    },
+    track () {
+      this.$ga.page('/')
     }
+  },
+  mounted() {
+    this.track();
   }
 }
 </script>
