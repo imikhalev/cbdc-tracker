@@ -27,8 +27,8 @@ function configureMap(mapChart) {
     // instead of Miller, you can use Mercator or many other projections available: https://www.amcharts.com/demos/map-using-d3-projections/
     mapChart.projection = new am4maps.projections.Miller();
     //mapChart.panBehavior = "move";
-    mapChart.seriesContainer.draggable = false;
-    mapChart.seriesContainer.resizable = false;
+    mapChart.seriesContainer.draggable = true;
+    mapChart.seriesContainer.resizable = true;
     mapChart.maxZoomLevel = 1;
 
 
@@ -46,7 +46,7 @@ function configureMap(mapChart) {
         property: "fill",
         target: polygonSeries.mapPolygons.template,
         min: mapChart.colors.getIndex(1).brighten(1),
-        max: mapChart.colors.getIndex(5).brighten(-0.3),
+        max: mapChart.colors.getIndex(8).brighten(-0.3),
         minValue: Math.min(...Object.values(statuses)),
         maxValue: Math.max(...Object.values(statuses)),
     });
@@ -74,8 +74,7 @@ export default {
   watch: {
       chartData(value) {
           if (this.mapChart) {
-              
-              this.mapChart.series.getIndex(0).data = value;
+                this.mapChart.series.getIndex(0).data = value;
           }
       }
   },
