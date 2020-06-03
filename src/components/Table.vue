@@ -20,7 +20,12 @@
                 const header = ["Country/Region", "Announcement Year", "Central Bank(s)", "Digital Currency", "Status", "Type", "Structure", "Technology", "Programmability", "Interoperability", "Governance structure"];
                 result.push(header);
 
-                for(const item of this.chartData) {
+                for(const item of this.chartData){
+                    // console.log("item");
+                    // console.log(item);
+                    if(item.value == null) {    // quick fix for the no map issue when no checkbox is selected. Need to bring a better fix when understood the map library better.
+                        continue;
+                    }                        
                     const row = [item["Country/Region"], item["Announcement Year"], item["Central Banks"], item["Digital Currency"], item["Status"], item["Type"], item["Structure"], item["Technology"], item["Programmability"], item["Interoperability"], item["Governance structure"]];
                     result.push(row);
                 }
