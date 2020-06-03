@@ -1,6 +1,6 @@
 <template>
-  <b-container fluid="" class="h-100 mt-2">
-    <b-row  class="h-75">
+  <b-container fluid="auto" class="mt-2 ml-2 mr-2">
+    <b-row  class="h-90">
       <b-col cols="9">
         <Map :chartData="chartData"/>
       </b-col>
@@ -40,7 +40,15 @@ export default {
     chartData() {
       const result = [];
       for(const item of cbdc) {
-        if (this.selectedStatuses.indexOf(item.Status) < 0) {
+        if (this.selectedStatuses.indexOf(item.Status) < 0) { // a quick fix to show the map when there is no checked checkboxes. Need to understand the logic better to provide a proper fix
+          const country = countries.find(country => country.name === item["Country/Region"]);
+          if (!country) {
+            continue;
+          }
+          item.id = country.code;
+          item.value = statuses['none'];
+          result.push(item);
+          // console.log(item.Status);
           continue;
         }
         const country = countries.find(country => country.name === item["Country/Region"]);
@@ -49,6 +57,7 @@ export default {
         }
         item.id = country.code;
         item.value = statuses[item.Status];
+        // item.value = null;
         result.push(item);
       }
       return result;
@@ -57,6 +66,7 @@ export default {
   methods: {
     selectedStatusesChanged(selectedStatuses) {
       this.selectedStatuses = selectedStatuses;
+      //console.log(this.selectedStatuses);
     },
     track () {
       this.$ga.page('/')
