@@ -1,5 +1,5 @@
 export default {
-    "PoC": 1,
+    "Research": 1,
     "Development": 2,
     "Pilot": 3,
     "Launched": 4,

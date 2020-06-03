@@ -14,9 +14,9 @@
         </div>
         <br>
         <div>
-            <b>PoC</b> Countries that published multiple research reports about CBDC and started experimenting<br>
-            <b>Development</b> Countries in the midst of launching a digital currency at larger scale or starting a pilot in small scale<br>
-            <b>Pilot</b> Countries exploring CBDC for domestic interbank or just testing blockchain in a small-scale and real environment<br>
+            <b>Research</b> Countries that published multiple research reports about CBDC and start experimenting<br>
+            <b>Development</b> Countries in the midst of launching a digital currency as a small-scale pilot or moving towards a large-scale launch<br>
+            <b>Pilot</b> Countries piloting CBDC for domestic interbank or international use-cases in a real environment with a limited number of parties<br>
             <b>Launched</b> Countries officially launched a digital currency and issued tokens for transactions<br>
             <b>Cancelled</b> Countries cancelled or decommissioned a CBDC
         </div>
