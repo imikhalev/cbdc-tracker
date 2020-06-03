@@ -32,7 +32,7 @@
 
                 return {
                     data: result,
-                    header: 'row', stripe: true, sort: [0, 1, 4], columnWidth: [{column: 0, width: 100}, {column: 1, width: 80}, {column: 2, width: 300}, {column: 3, width: 110}, {column: 4, width: 80}, {column: 5, width: 100}, {column: 6, width: 100}, {column: 7, width: 200}, {column: 8, width: 120}, {column: 9, width: 120}],
+                    header: 'row', stripe: true, sort: [0, 1, 4], columnWidth: [{column: 0, width: 140}, {column: 1, width: 80}, {column: 2, width: 300}, {column: 3, width: 110}, {column: 4, width: 80}, {column: 5, width: 100}, {column: 6, width: 100}, {column: 7, width: 200}, {column: 8, width: 120}, {column: 9, width: 120}],
                 }
             }
         },
