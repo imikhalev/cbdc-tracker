@@ -24,6 +24,7 @@ import countries from "@/countries.js";
 import statuses from "@/statuses.js";
 import Table from "@/components/Table.vue";
 
+let ROOT_PATH = 'http://cbdctracker.org'
 export default {
   name: 'Main',
   components: {
@@ -33,7 +34,8 @@ export default {
   },
   data() {
     return {
-      selectedStatuses: Object.keys(statuses)
+      selectedStatuses: Object.keys(statuses),
+      preview: ROOT_PATH + require('@/assets/preview.png')
     } 
   },
   computed: {
@@ -74,6 +76,23 @@ export default {
   },
   mounted() {
     this.track();
+  },
+  metaInfo() {
+    return {
+      meta: [
+        // Twitter Card
+        {name: 'twitter:card', content: 'summary'},
+        {name: 'twitter:title', content: 'CBDC tracker'},
+        {name: 'twitter:description', content: 'Tracker for latest CBDC (Central Bank Digital Currency) developments'},
+        {name: 'twitter:image', content: this.preview},
+        // Facebook OpenGraph
+        {property: 'og:title', content: 'CBDC tracker'},
+        {property: 'og:site_name', content: 'CBDC tracker'},
+        {property: 'og:type', content: 'website'},
+        {property: 'og:image', content:  this.preview},
+        {property: 'og:description', content: 'Tracker for latest CBDC (Central Bank Digital Currency) developments'}
+      ]
+    }
   }
 }
 </script>

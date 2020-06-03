@@ -12,9 +12,11 @@
     "@amcharts/amcharts4": "^4.9.24",
     "@amcharts/amcharts4-fonts": "^4.0.1",
     "@amcharts/amcharts4-geodata": "^4.1.15",
+    "axios": "^0.19.2",
     "bootstrap": "^4.5.0",
     "bootstrap-vue": "^2.15.0",
     "core-js": "^3.6.5",
+    "nuxt": "^2.12.2",
     "vue": "^2.6.11"
   },
   "devDependencies": {
